@@ -30,11 +30,11 @@ export default function TestimonialsSection() {
   ]
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+          <p className="text-lg text-gray-300">
             Don't just take our word for it. Here's what businesses like yours have experienced with our platform.
           </p>
         </div>
@@ -43,17 +43,17 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
+              className="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
+                    className={`h-5 w-5 ${i < testimonial.rating ? "text-white" : "text-gray-500"}`}
                   />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 flex-grow">{testimonial.content}</p>
+              <p className="text-gray-300 mb-6 flex-grow">{testimonial.content}</p>
               <div className="flex items-center">
                 <div className="mr-4">
                   <Image
@@ -65,8 +65,8 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.author}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.position}</p>
+                  <h4 className="font-semibold text-white">{testimonial.author}</h4>
+                  <p className="text-sm text-gray-400">{testimonial.position}</p>
                 </div>
               </div>
             </div>
